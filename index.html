@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harrison Catering Services Loyalty App</title>
+  <link href="style.css" rel="stylesheet" />
+  <script src="https://unpkg.com/html5-qrcode" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Harrison Catering Services Loyalty Card</h1>
+  </header>
+
+  <section class="loyalty-section">
+    <div class="item">
+      <h2>Coffee</h2>
+      <div id="coffee-stamps" class="stamps"></div>
+      <button onclick="redeem('coffee')">Redeem Coffee</button>
+    </div>
+
+    <div class="item">
+      <h2>Soup</h2>
+      <div id="soup-stamps" class="stamps"></div>
+      <button onclick="redeem('soup')">Redeem Soup</button>
+    </div>
+
+    <div class="item">
+      <h2>Salad</h2>
+      <div id="salad-stamps" class="stamps"></div>
+      <button onclick="redeem('salad')">Redeem Salad</button>
+    </div>
+  </section>
+
+  <section id="qr-scanner-section">
+    <h2>Scan your QR code</h2>
+    <div id="qr-reader" style="width:300px;"></div>
+    <div id="qr-result"></div>
+  </section>
+
+  <section>
+    <button id="reset-button" onclick="resetStamps()">Reset All Stamps</button>
+  </section>
+</body>
+</html>
